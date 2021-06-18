@@ -5,6 +5,10 @@ export default function DigitalClicker(){
 
   let [timesClicked, setClicked] = useState(0)
   return(
-    <button onClick={this.handleClick}>{timesClicked}</button>
+    <button onClick={()=>{
+      setState(prevState => ({
+      timesClicked: prevState.timesClicked+1
+    }))
+    })}>{timesClicked}</button>
   )
 }
